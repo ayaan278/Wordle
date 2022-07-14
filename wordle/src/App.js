@@ -1,13 +1,11 @@
-import './components/modules/Header'
-import Header from './components/modules/Header';
-import Footer from './components/modules/Footer';
-import Input from './components/modules/Input';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <>
       <Header/>
-        <Input/>
+        
       <Footer/>
     </>
   );
