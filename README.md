@@ -2,10 +2,15 @@
 
 This website is a clone of wordle - https://www.nytimes.com/games/wordle/index.html with some modifications
 
-This wordle game have & words letters word to guess with only 5 attempts
+This wordle game have7 words letters word to guess with only 5 attempts.
+This game also have hints which only shows up after the failed 4th attempt.
 
-To run backend type.
+To run back-end type.
 
     Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
     json-server ./data/db.json --port 3001
+    
+To run front-end type
+    
+    npm start
 
