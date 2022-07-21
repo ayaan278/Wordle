@@ -22,6 +22,7 @@ function App() {
   return (
     <>
       <Header />
+      
       {solution && <Wordle solution={solution} />}
       {/* doesn't print solution unless there is some values to it */}
       <Footer />

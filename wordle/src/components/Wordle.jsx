@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Center, Container, Heading, HStack, PinInput, PinInputField } from "@chakra-ui/react";
+import { Center, Container, Heading, } from "@chakra-ui/react";
 import useWordle from "../hooks/useWordle";
 import Grid from "./Grid";
 
@@ -13,9 +13,9 @@ export default function Worlde({ solution }) {
   }, [handleKeyup]); //passing dependencies so it changes in the change of event
 
   return (
-    <Center py="3em">
+    <Center py="3em" >
       <Container>
-        <Heading> Current guess - {currentGuess}</Heading>
+        <Heading> Solution - {solution}</Heading>
         
         <Grid currentGuess={currentGuess} guesses={guesses} turn={turn}  />
       </Container>

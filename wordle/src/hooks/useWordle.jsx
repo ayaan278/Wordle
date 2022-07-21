@@ -10,21 +10,21 @@ const useWordle = (solution) => {
   //format a guess into the word
   const formatGuess = () => {
     let solutionArray = [...solution]
-    let formattedGuess = [...currentGuess].map((l) => {
+    let formattedGuess = [...currentGuess.toLowerCase()].map((l) => {
       return { key: l, color: "grey" }
     })
 
     //to find green letters in the guess
     formattedGuess.forEach((l, i) => {
       if (solutionArray[i] === l.key) {
-        formattedGuess[i].color = "green"
+        formattedGuess[i].color = "#5FD068"
         solutionArray[i] = null
       }
     })
     //to find yellow letters in the guess
     formattedGuess.forEach((l, i) => {
       if (solutionArray.includes(l.key) && l.color !== "green") {
-        formattedGuess[i].color = "yellow"
+        formattedGuess[i].color = "#FFEE63"
         solutionArray[solutionArray.indexOf(l.key)] = null
       }
     })
@@ -46,7 +46,7 @@ const useWordle = (solution) => {
         return [...prevHistory, currentGuess]
     })
     setTurn((prevTurn) =>{
-        return prevTurn +1
+        return prevTurn + 1
     })
     setCurrentGuess('')
   }
