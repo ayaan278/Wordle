@@ -1,7 +1,9 @@
 import React from "react";
 import { Container, HStack, PinInput, PinInputField } from "@chakra-ui/react";
+// import ReactCardFlip from 'react-card-flip';
 
 export default function Row({ guess, currentGuess }) {
+
   if (guess) {
     return (
         <HStack py="0.25em">
@@ -25,7 +27,7 @@ export default function Row({ guess, currentGuess }) {
               <PinInputField key={i} bg={letter.color} />
             </PinInput>
           ))}
-          {[...Array(5 - letters.length)].map((_, i) => (
+          {[...Array(7 - letters.length)].map((_, i) => (
             <PinInput size="lg" defaultValue="     ">
               <PinInputField key={i} />
             </PinInput>
@@ -36,7 +38,9 @@ export default function Row({ guess, currentGuess }) {
 
   return (
       <HStack py="0.25em">
-        <PinInput size="lg" defaultValue="     ">
+        <PinInput size="lg" defaultValue="       ">
+          <PinInputField />
+          <PinInputField />
           <PinInputField />
           <PinInputField />
           <PinInputField />

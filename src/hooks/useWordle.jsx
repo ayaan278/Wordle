@@ -63,7 +63,7 @@ const useWordle = (solution) => {
       if (history.includes(currentGuess)) {
         return
       }
-      if (currentGuess.length !== 5) {
+      if (currentGuess.length !== 7) {
         return
       }
       const formatted = formatGuess()
@@ -76,7 +76,7 @@ const useWordle = (solution) => {
     }
     //regex to check of the keyboard is entering alphabets only
     if (/^[A-Za-z]$/.test(key)) {
-      if (currentGuess.length < 5) {
+      if (currentGuess.length < 7) {
         setCurrentGuess((prev) => prev + key)
       }
     }
