@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 
 const useWordle = (solution) => {
   const [turn, setTurn] = useState(0) //to track turn
@@ -6,6 +6,7 @@ const useWordle = (solution) => {
   const [guesses, setGuesses] = useState([...Array(6)]) // each guess is an array
   const [history, setHistory] = useState([]) // each guess is a string
   const [isCorrect, setIsCorrect] = useState(false)
+  const [usedKeys, setUsedKeys] = useState({})
 
   //format a guess into the word
   const formatGuess = () => {
@@ -23,7 +24,7 @@ const useWordle = (solution) => {
     })
     //to find yellow letters in the guess
     formattedGuess.forEach((l, i) => {
-      if (solutionArray.includes(l.key) && l.color !== "green") {
+      if (solutionArray.includes(l.key) && l.color !== "#5FD068") {
         formattedGuess[i].color = "#FFEE63"
         solutionArray[solutionArray.indexOf(l.key)] = null
       }
@@ -47,6 +48,25 @@ const useWordle = (solution) => {
     })
     setTurn((prevTurn) =>{
         return prevTurn + 1
+    })
+    setUsedKeys((prevUsedKeys) =>{
+      let newKeys = {...prevUsedKeys}
+      formattedGuess.forEach((l) =>{
+        const currentColor = newKeys[l.key]
+        if(l.color=== '#5FD068'){
+          newKeys[l.key] = '#5FD068'
+          return
+        }
+        if(l.color=== '#FFEE63' && currentColor !== '#5FD068'){
+          newKeys[l.key] = '#FFEE63'
+          return
+        }
+        if(l.color=== 'grey' && currentColor !== '#5FD068' && currentColor !== '#FFEE63'){
+          newKeys[l.key] = 'grey'
+          return
+        }
+      })
+      return newKeys
     })
     setCurrentGuess('')
   }
@@ -81,7 +101,7 @@ const useWordle = (solution) => {
       }
     }
   }
-  return { turn, currentGuess, guesses, isCorrect, handleKeyup }
+  return {turn, currentGuess, guesses, isCorrect, usedKeys, handleKeyup}
 }
 
 export default useWordle
