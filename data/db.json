@@ -28,20 +28,20 @@
     { "key": "z" }
   ],
   "solutions": [
-    { "id": 1, "word": "abandon" },
-    { "id": 2, "word": "airline" },
-    { "id": 3, "word": "avenger" },
-    { "id": 4, "word": "awkward" },
-    { "id": 5, "word": "bastard" },
-    { "id": 6, "word": "biscuit" },
-    { "id": 7, "word": "calcium" },
-    { "id": 8, "word": "ironman" },
-    { "id": 9, "word": "pirates" },
-    { "id": 10, "word": "captain" },
-    { "id": 11, "word": "knights" },
-    { "id": 12, "word": "cyclone" },
-    { "id": 13, "word": "dentist" },
-    { "id": 14, "word": "doctors" },
-    { "id": 15, "word": "thrones" }
+    { "id": 1, "word": "abandon" ,"hint": " " },
+    { "id": 2, "word": "airline" ,"hint": " " },
+    { "id": 3, "word": "avenger" ,"hint": "Group of Heroes" },
+    { "id": 4, "word": "awkward" ,"hint": "" },
+    { "id": 5, "word": "bastard" ,"hint": " " },
+    { "id": 6, "word": "biscuit" ,"hint": " " },
+    { "id": 7, "word": "jonsnow" ,"hint": "The true hier to the iron throne" },
+    { "id": 8, "word": "ironman" ,"hint": "I love you 3000!" },
+    { "id": 9, "word": "pirates" ,"hint": "" },
+    { "id": 10, "word": "captain" ,"hint": " " },
+    { "id": 11, "word": "knights" ,"hint": " " },
+    { "id": 12, "word": "cyclone" ,"hint": " " },
+    { "id": 13, "word": "dentist" ,"hint": " " },
+    { "id": 14, "word": "doctors" ,"hint": " " },
+    { "id": 15, "word": "thrones" ,"hint": "A chair made for a king" }
   ]
 }
