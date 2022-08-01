@@ -2,7 +2,7 @@ import {
   Container,
   Heading,
   Box,
-  SimpleGrid,
+  Grid,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 
@@ -18,8 +18,8 @@ export default function Keypad({usedKeys}) {
   }, []);
 
   return (
-    <Container>
-      <SimpleGrid columns="10" >
+    <Container py="1em">
+      <Grid alignItems='center' templateColumns='repeat(8, 1fr)' justify={'center'} display={'grid'}>
         {letters &&
           letters.map((l) => {
             let color = usedKeys[l.key]
@@ -34,11 +34,11 @@ export default function Keypad({usedKeys}) {
                 m="0.25em"
                 bg={color}
               >
-                <Heading fontWeight='400' fontSize="26px" key={l.key}>{l.key}</Heading>
+                <Heading fontWeight='400' fontSize="26px" key={l.key} m="0.25em">{l.key}</Heading>
               </Box>
             );
           })}
-      </SimpleGrid>{" "}
+      </Grid>{" "}
     </Container>
   );
 }

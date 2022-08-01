@@ -6,10 +6,10 @@ export default function Row({ guess, currentGuess }) {
 
   if (guess) {
     return (
-        <HStack py="0.25em">
+        <HStack py="0.25em" >
           {guess.map((l, i) => (
-            <PinInput size="lg" defaultValue={l.key}>
-              <PinInputField key={i} bg={l.color} color="white" fontSize={'24px'}/>
+            <PinInput size="lg" defaultValue={l.key} variant={'filled'} >
+              <PinInputField key={i} bg={l.color} color="white" fontSize={'24px'} />
             </PinInput>
           ))}
         </HStack>
@@ -23,13 +23,13 @@ export default function Row({ guess, currentGuess }) {
     return(
       <HStack py="0.25em">
         {letters.map((letter, i) => (
-            <PinInput size="lg" defaultValue={letter}>
-              <PinInputField key={i} bg={letter.color} />
+            <PinInput size="lg" defaultValue={letter} variant={'filled'} >
+              <PinInputField key={i} bg={letter.color} ontSize={'24px'}/>
             </PinInput>
           ))}
           {[...Array(7 - letters.length)].map((_, i) => (
-            <PinInput size="lg" defaultValue="     ">
-              <PinInputField key={i} />
+            <PinInput size="lg" defaultValue="     " variant={'filled'}>
+              <PinInputField key={i} ontSize={'24px'}/>
             </PinInput>
           ))}
       </HStack>
@@ -38,7 +38,7 @@ export default function Row({ guess, currentGuess }) {
 
   return (
       <HStack py="0.25em">
-        <PinInput size="lg" defaultValue="       " fontSize={'24px'}>
+        <PinInput size="lg" defaultValue="       "  variant={'filled'} >
           <PinInputField />
           <PinInputField />
           <PinInputField />

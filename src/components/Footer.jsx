@@ -2,17 +2,18 @@ import { Heading, Link, HStack } from "@chakra-ui/react";
 import React from "react";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 
+
 const Footer = () => {
   return (
-    <HStack w="100%" bg="black" color="white">
+    <HStack w="100%" bg="black" color="#00C9C8">
       <HStack w={{ base: "50%", md: "50%", lg: "60%" }}>
         <Heading fontSize={{ base: "xs", md: "xs", lg: "sm" }} pl="2em">
           {" "}
-          Copyright &copy; Ayaan Ahmad
+          Created with &hearts; by Ayaan Ahmad
         </Heading>
       </HStack>
 
-      <HStack w={{ base: "50%", md: "50%", lg: "40%" }} gap="1em" p="1em">
+      <HStack w={{ base: "50%", md: "50%", lg: "40%" }} gap="1em" px="5em" py="1em" justifyContent={'end'}>
         <Link href="https://www.instagram.com/_.ayaanii._/">
           <span size="md" class="inline-block h-12 w-12 ring-white">
             <FaInstagram style={{ fontSize: "30px" }} />

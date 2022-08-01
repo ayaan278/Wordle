@@ -28,20 +28,20 @@
     { "key": "z" }
   ],
   "solutions": [
-    { "id": 1, "word": "abandon" ,"hint": " " },
-    { "id": 2, "word": "airline" ,"hint": " " },
+    { "id": 1, "word": "abandon" ,"hint": "AN act to cease support" },
+    { "id": 2, "word": "airline" ,"hint": "An air transportation system" },
     { "id": 3, "word": "avenger" ,"hint": "Group of Heroes" },
-    { "id": 4, "word": "awkward" ,"hint": "" },
-    { "id": 5, "word": "bastard" ,"hint": " " },
-    { "id": 6, "word": "biscuit" ,"hint": " " },
-    { "id": 7, "word": "jonsnow" ,"hint": "The true hier to the iron throne" },
+    { "id": 4, "word": "awkward" ,"hint": "Hard to do or deal with" },
+    { "id": 5, "word": "bastard" ,"hint": "A despicable person" },
+    { "id": 6, "word": "biscuit" ,"hint": "A flour-based baked and shaped food product" },
+    { "id": 7, "word": "iceberg" ,"hint": "Titanic was hit by an" },
     { "id": 8, "word": "ironman" ,"hint": "I love you 3000!" },
-    { "id": 9, "word": "pirates" ,"hint": "" },
-    { "id": 10, "word": "captain" ,"hint": " " },
-    { "id": 11, "word": "knights" ,"hint": " " },
-    { "id": 12, "word": "cyclone" ,"hint": " " },
-    { "id": 13, "word": "dentist" ,"hint": " " },
-    { "id": 14, "word": "doctors" ,"hint": " " },
-    { "id": 15, "word": "thrones" ,"hint": "A chair made for a king" }
+    { "id": 9, "word": "pirates" ,"hint": "The robbers who travels by water" },
+    { "id": 10, "word": "captain" ,"hint": "A commanding officer" },
+    { "id": 11, "word": "knights" ,"hint": "The warriors who fights on a horseback" },
+    { "id": 12, "word": "cyclone" ,"hint": "The large system of winds that circulates" },
+    { "id": 13, "word": "default" ,"hint": "A preselected option adopted by a computer program" },
+    { "id": 14, "word": "eclipse" ,"hint": "A celestial body obscure the light from another celestial body" },
+    { "id": 15, "word": "thrones" ,"hint": "The chairs made for the kings" }
   ]
 }
