@@ -8,8 +8,8 @@ export default function Row({ guess, currentGuess }) {
     return (
         <HStack py="0.25em" >
           {guess.map((l, i) => (
-            <PinInput size="lg" defaultValue={l.key} variant={'filled'} >
-              <PinInputField key={i} bg={l.color} color="white" fontSize={'24px'} />
+            <PinInput size="lg" defaultValue={l.key.toUpperCase()} variant={'filled'} >
+              <PinInputField key={i} bg={l.color} color="white" fontSize={'24px'} fontWeight={'600'}/>
             </PinInput>
           ))}
         </HStack>

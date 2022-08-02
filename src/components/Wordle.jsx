@@ -25,25 +25,26 @@ export default function Worlde({ solution, hint }) {
         setShowModal(true)
         window.removeEventListener("keyup", handleKeyup)
     }
-    if(turn > 3){
+    if(turn > 3 && isCorrect===false){
       showHints(true)
-      window.removeEventListener("keyup", handleKeyup)
     }
     return () => window.removeEventListener("keyup", handleKeyup)
-  }, [handleKeyup, isCorrect, turn]) //passing dependencies so it changes in the change of event
+  }, [handleKeyup]) //passing dependencies so it changes in the change of event
 
   return (
     <Center py="3em" bg="#00C9C8">
       <Container>
-      {/* {showModal && <GameOver isCorrect={isCorrect} turn={turn} solution={solution} />} */}
         <VStack>
             <Heading> Solution - {solution}</Heading>
             <HStack>
-              <VStack pos="absolute" top="300" left="50" >
+              <VStack pos="absolute" top="200" left="50" >
                 {hints && <Hint hint={hint} />}
               </VStack>
               <VStack >
                 <Grid currentGuess={currentGuess} guesses={guesses} turn={turn}  />
+              </VStack>
+              <VStack pos="absolute" top="120" right="50">
+                {showModal && <GameOver isCorrect={isCorrect} turn={turn} solution={solution} />}
               </VStack>
             </HStack>
             <Divider/>

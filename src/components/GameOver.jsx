@@ -1,46 +1,65 @@
-import React, { useDisclosure} from "react";
+import React from "react";
 import {
+  Container,
+  VStack,
   Heading,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  Button,
-  ModalCloseButton,
+  Divider,
 } from "@chakra-ui/react";
+import { Player } from '@lottiefiles/react-lottie-player';
+import Confetti from '../assets/LottieFiles/Confetti.json'
+import Melt from '../assets/LottieFiles/Melt.json'
 
 export default function GameOver ({ isCorrect, turn, solution }) {
-  const { isOpen, onOpen} = useDisclosure();
-
 
   return (
-    <>
-    <Button onClick={onOpen}>Open Modal</Button>
-
-    <Modal isOpen={isOpen} >
-      <ModalOverlay />
+    <Container py="1em" w="400px">
       {isCorrect && (
-        <ModalContent>
-          <ModalHeader>You Win!</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <Heading>The correct solution was {solution}</Heading>
-            <Heading>You solved the game {turn} guesses</Heading>
-          </ModalBody>
-        </ModalContent>
+      <VStack boxShadow='dark-lg' p='6' rounded='md' bg='white' textAlign={'center'}>
+          <Heading fontSize="28px" fontWeight={'600'}>
+            You Win!
+          </Heading>
+          <Divider orientation='horizontal' />
+          <Heading fontSize="26px" fontWeight={'500'}>
+            The correct solution was indeed {solution}.
+          </Heading>
+          <Player
+            autoplay
+            controls
+            loop
+            mode="normal"
+            src={Confetti}
+            >
+          </Player>
+          <Divider orientation='horizontal' />
+          <Heading fontSize="26px" fontWeight={'500'}>
+            You solved the game in {turn} guesses.
+          </Heading>
+      </VStack>
       )}
-      {!isCorrect && (
-        <ModalContent>
-          <ModalHeader>You Lose!</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <Heading>The correct solution was {solution}</Heading>
-            <Heading>You are out of guesses</Heading>
-          </ModalBody>
-        </ModalContent>
+      {isCorrect===false && (
+        <VStack boxShadow='dark-lg' p='6' rounded='md' bg='white' textAlign={'center'}>
+          <Heading fontSize="28px" fontWeight={'600'}>
+            You Lose!
+          </Heading>
+          <Divider orientation='horizontal' />
+          <Heading fontSize="26px" fontWeight={'500'}>
+            The correct solution was {solution}.
+          </Heading>
+          <Player
+            autoplay
+            controls
+            loop
+            mode="normal"
+            src={Melt}
+            style={{ height: '300px', width: '300px' }}
+            >
+          </Player>
+          <Divider orientation='horizontal' />
+          <Heading fontSize="26px" fontWeight={'500'}>
+          You are out of guesses.
+          </Heading>
+        </VStack>
       )}
-    </Modal>
-    </>
+    </Container>
   );
 };

@@ -35,7 +35,7 @@ const useWordle = (solution) => {
 
   //add new guess to the guesses state
   const addNewGuess = (formattedGuess) => {
-    if(currentGuess === solution){
+    if(currentGuess.toLowerCase() === solution){
         setIsCorrect(true)
     }
     setGuesses((prevGuesses) => {

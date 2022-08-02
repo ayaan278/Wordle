@@ -1,5 +1,7 @@
 import React from 'react'
 import { Container, VStack, Heading, Divider } from '@chakra-ui/react'
+import { Player } from '@lottiefiles/react-lottie-player'
+import Confuse from '../assets/LottieFiles/Confuse.json'
 
 const Hint = ({hint}) => {
   return (
@@ -9,6 +11,15 @@ const Hint = ({hint}) => {
                 Hint
             </Heading>
             <Divider orientation='horizontal' />
+            <Player
+              autoplay
+              controls
+              loop
+              mode="normal"
+              src={Confuse}
+              style={{ height: '250px', width: '300px' }}
+              >
+            </Player>
             <Heading fontSize="26px" fontWeight={'500'}>
                 {hint}
             </Heading>
