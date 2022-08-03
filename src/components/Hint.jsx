@@ -5,7 +5,7 @@ import Confuse from '../assets/LottieFiles/Confuse.json'
 
 const Hint = ({hint}) => {
   return (
-    <Container py="1em" w={{base: '300px', md: '300px', lg: '400px'}}>
+    <Container py="1em" w={{base: '300px', md: '300px', lg: '300px'}}>
         <VStack boxShadow='dark-lg' p='6' rounded='md' bg='white'>
             <Heading fontSize={{base: '20px', md: '22px', lg: '28px'}} fontWeight={'600'}>
                 Hint

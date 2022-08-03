@@ -41,24 +41,19 @@ export default function Worlde({ solution, hint }) {
 
   return (
     <Center py="3em" bg="#00C9C8" overflowX={"hidden"}>
-      <Container>
+      <Container maxW="container.xl">
         <VStack>
           {/* <Heading> Solution - {solution}</Heading> */}
-          <Stack direction={{ base: "column", md: "column", lg: "row" }}>
-            <VStack
-              pos={{ base: "static", md: "absolute", lg: "absolute" }}
-              top="200"
-              left={{ base: "0", md: "40", lg: "50" }}
+          <Stack direction={{ base: "column", md: "column", lg: "row" }} w="100%">
+            <VStack w={{base: '100%', md: '100%', lg: '30%'}}
+
             >
               {hints && <Hint hint={hint} />}
             </VStack>
-            <VStack w="100%">
+            <VStack w={{base: '100%', md: '100%', lg: '40%'}} pt="2em">
               <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
             </VStack>
-            <VStack
-              pos={{ base: "static", md: "static", lg: "absolute" }}
-              top="120"
-              right="50"
+            <VStack w={{base: '100%', md: '100%', lg: '30%'}}
             >
               {showModal && (
                 <GameOver
