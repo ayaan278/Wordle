@@ -1,6 +1,7 @@
 import React from "react";
 import {  HStack, PinInput, PinInputField } from "@chakra-ui/react";
 // import ReactCardFlip from 'react-card-flip';
+import '../styles/keyframes.css'
 
 export default function Row({ guess, currentGuess }) {
 
@@ -9,7 +10,7 @@ export default function Row({ guess, currentGuess }) {
         <HStack py="0.25em" >
           {guess.map((l, i) => (
             <PinInput size={{ base: "md", md: "md", lg: "lg" }} defaultValue={l.key.toUpperCase()} variant={'filled'} >
-              <PinInputField key={i} bg={l.color} color="white" fontSize={'24px'} fontWeight={'600'}/>
+              <PinInputField key={i} bg={l.color} color="white" fontSize={'24px'} fontWeight={'600'} animation={'swing-in-top-fwd .6s cubic-bezier(.39,.575,.565,1.000) both'}/>
             </PinInput>
           ))}
         </HStack>
@@ -24,12 +25,12 @@ export default function Row({ guess, currentGuess }) {
       <HStack py="0.25em">
         {letters.map((letter, i) => (
             <PinInput size={{ base: "md", md: "md", lg: "lg" }} defaultValue={letter} variant={'filled'} >
-              <PinInputField key={i} bg={letter.color} ontSize={'24px'}/>
+              <PinInputField key={i} bg={letter.color} ontSize={'24px'} />
             </PinInput>
           ))}
           {[...Array(7 - letters.length)].map((_, i) => (
             <PinInput size={{ base: "md", md: "md", lg: "lg" }} defaultValue="     " variant={'filled'}>
-              <PinInputField key={i} ontSize={'24px'}/>
+              <PinInputField key={i} ontSize={'24px'} />
             </PinInput>
           ))}
       </HStack>
