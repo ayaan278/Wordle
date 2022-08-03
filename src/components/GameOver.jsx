@@ -12,14 +12,14 @@ import Melt from '../assets/LottieFiles/Melt.json'
 export default function GameOver ({ isCorrect, turn, solution }) {
 
   return (
-    <Container py="1em" w="400px">
+    <Container py="1em" w={{base: '300px', md: '300px', lg: '400px'}}>
       {isCorrect && (
       <VStack boxShadow='dark-lg' p='6' rounded='md' bg='white' textAlign={'center'}>
-          <Heading fontSize="28px" fontWeight={'600'}>
+          <Heading fontSize={{base: '20px', md: '22px', lg: '28px'}} fontWeight={'600'}>
             You Win!
           </Heading>
           <Divider orientation='horizontal' />
-          <Heading fontSize="26px" fontWeight={'500'}>
+          <Heading fontSize={{base: '18px', md: '20px', lg: '26px'}} fontWeight={'500'}>
             The correct solution was indeed {solution}.
           </Heading>
           <Player
@@ -31,18 +31,18 @@ export default function GameOver ({ isCorrect, turn, solution }) {
             >
           </Player>
           <Divider orientation='horizontal' />
-          <Heading fontSize="26px" fontWeight={'500'}>
+          <Heading fontSize={{base: '18px', md: '20px', lg: '26px'}} fontWeight={'500'}>
             You solved the game in {turn} guesses.
           </Heading>
       </VStack>
       )}
       {isCorrect===false && (
         <VStack boxShadow='dark-lg' p='6' rounded='md' bg='white' textAlign={'center'}>
-          <Heading fontSize="28px" fontWeight={'600'}>
+          <Heading fontSize={{base: '20px', md: '22px', lg: '28px'}} fontWeight={'600'}>
             You Lose!
           </Heading>
           <Divider orientation='horizontal' />
-          <Heading fontSize="26px" fontWeight={'500'}>
+          <Heading fontSize={{base: '18px', md: '20px', lg: '26px'}} fontWeight={'500'}>
             The correct solution was {solution}.
           </Heading>
           <Player
@@ -55,7 +55,7 @@ export default function GameOver ({ isCorrect, turn, solution }) {
             >
           </Player>
           <Divider orientation='horizontal' />
-          <Heading fontSize="26px" fontWeight={'500'}>
+          <Heading fontSize={{base: '18px', md: '20px', lg: '26px'}} fontWeight={'500'}>
           You are out of guesses.
           </Heading>
         </VStack>

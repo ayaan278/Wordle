@@ -9,7 +9,8 @@ function App() {
   const [hint, setHint] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/solutions")
+    // fetch("http://localhost:3001/solutions")
+    fetch("https://api.npoint.io/1238a98c3a3ca57bc550/solutions")
       .then((res) => res.json())
       .then((json) => {
         // console.log(json);

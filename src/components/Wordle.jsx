@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Center, Container, Divider, Heading, HStack, VStack, } from "@chakra-ui/react";
+import { Center, Container, Divider, Heading, Stack, VStack, } from "@chakra-ui/react";
 import useWordle from "../hooks/useWordle";
 import Grid from "./Grid";
 import Keypad from "./Keypad";
@@ -13,7 +13,7 @@ export default function Worlde({ solution, hint }) {
 
   useEffect(() => {
     window.addEventListener("keyup", handleKeyup)
-
+    
     if(isCorrect){
         // setTimeout(() => setShowModal(true), 2000);
         setShowModal(true)
@@ -29,24 +29,24 @@ export default function Worlde({ solution, hint }) {
       showHints(true)
     }
     return () => window.removeEventListener("keyup", handleKeyup)
-  }, [handleKeyup]) //passing dependencies so it changes in the change of event
+  }, [handleKeyup, isCorrect, turn]) //passing dependencies so it changes in the change of event
 
   return (
-    <Center py="3em" bg="#00C9C8">
+    <Center py="3em" bg="#00C9C8" overflowX={'hidden'}>
       <Container>
         <VStack>
-            <Heading> Solution - {solution}</Heading>
-            <HStack>
-              <VStack pos="absolute" top="200" left="50" >
+            {/* <Heading> Solution - {solution}</Heading> */}
+            <Stack direction={{base:'column', md: 'column' , lg: 'row'}}>
+              <VStack pos={{base: "static", md:"absolute", lg:"absolute"}} top="200" left={{base: '0', md: '40', lg: '50'}} >
                 {hints && <Hint hint={hint} />}
               </VStack>
-              <VStack >
+              <VStack w="100%" >
                 <Grid currentGuess={currentGuess} guesses={guesses} turn={turn}  />
               </VStack>
-              <VStack pos="absolute" top="120" right="50">
+              <VStack pos={{base: "static", md:"static", lg:"absolute"}} top="120" right="50">
                 {showModal && <GameOver isCorrect={isCorrect} turn={turn} solution={solution} />}
               </VStack>
-            </HStack>
+            </Stack>
             <Divider/>
             <Keypad usedKeys={usedKeys}/>
         </VStack>

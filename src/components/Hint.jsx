@@ -5,9 +5,9 @@ import Confuse from '../assets/LottieFiles/Confuse.json'
 
 const Hint = ({hint}) => {
   return (
-    <Container py="1em" w="400px">
+    <Container py="1em" w={{base: '300px', md: '300px', lg: '400px'}}>
         <VStack boxShadow='dark-lg' p='6' rounded='md' bg='white'>
-            <Heading fontSize="28px" fontWeight={'600'}>
+            <Heading fontSize={{base: '20px', md: '22px', lg: '28px'}} fontWeight={'600'}>
                 Hint
             </Heading>
             <Divider orientation='horizontal' />
@@ -20,7 +20,7 @@ const Hint = ({hint}) => {
               style={{ height: '250px', width: '300px' }}
               >
             </Player>
-            <Heading fontSize="26px" fontWeight={'500'}>
+            <Heading fontSize={{base: '18px', md: '20px', lg: '26px'}} fontWeight={'500'} textAlign="center">
                 {hint}
             </Heading>
         </VStack>

@@ -13,11 +13,11 @@ import { HStack, VStack, Heading ,Popover,
 const Header = () => {
   return (
     <HStack p="1em" bg="#000000" color="#00C9C8">
-      <VStack w="30%"></VStack>
-      <VStack w="40%">
-        <Heading>Wordle</Heading>
+     
+      <VStack w={{base: '60%', md: '50%', lg: '70%'}}>
+        <Heading textAlign={'center'}>Wordle</Heading>
       </VStack>
-      <HStack w="30%" justifyContent={'end'}>
+      <HStack w={{base: '40%', md: '50%', lg: '30%'}} justifyContent={'end'}>
         <span size='md'>
           <Popover>
             <PopoverTrigger>
