@@ -11,7 +11,6 @@ import {
   Divider,
   PopoverArrow,
   PopoverCloseButton,
-  PopoverAnchor,
   Button,
   Link,
   PopoverFooter,

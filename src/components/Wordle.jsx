@@ -3,7 +3,6 @@ import {
   Center,
   Container,
   Divider,
-  Heading,
   Stack,
   VStack,
 } from "@chakra-ui/react";

@@ -72,11 +72,11 @@ const useWordle = (solution) => {
   }
 
   //handle event to track current guess
-  const handleKeyup = ({ key }) => {
+  const handleKeyup = (e) => {
     // console.log(key)
 
     //to track submission of the guess
-    if (key === "Enter") {
+    if (e.key === "Enter" || e.key === "Return" || e.keyCode === 13) {
       if (turn > 5) {
         return
       }
@@ -90,14 +90,14 @@ const useWordle = (solution) => {
       addNewGuess(formatted)
     }
     //to check if user is deleting letters before confirming guess
-    if (key === "Backspace") {
+    if (e.key === "Backspace") {
       setCurrentGuess((prev) => prev.slice(0, -1))
       return
     }
     //regex to check of the keyboard is entering alphabets only
-    if (/^[A-Za-z]$/.test(key)) {
+    if (/^[A-Za-z]$/.test(e.key)) {
       if (currentGuess.length < 7) {
-        setCurrentGuess((prev) => prev + key)
+        setCurrentGuess((prev) => prev + e.key)
       }
     }
   }
