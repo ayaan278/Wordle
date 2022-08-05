@@ -13,7 +13,7 @@ import GameOver from "./GameOver";
 import Hint from "./Hint";
 
 export default function Worlde({ solution, hint }) {
-  const { currentGuess, guesses, turn, isCorrect, usedKeys, handleKeyup } =
+  const { currentGuess, guesses, turn, isCorrect, usedKeys, handleKeyup, formatGuess, addNewGuess } =
     useWordle(solution);
   const [showModal, setShowModal] = useState(false);
   const [hints, showHints] = useState(false);
@@ -50,7 +50,7 @@ export default function Worlde({ solution, hint }) {
               {hints && <Hint hint={hint} />}
             </VStack>
             <VStack w={{base: '100%', md: '100%', lg: '40%'}} pt="2em">
-              <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} handleKeyup={handleKeyup} />
+              <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} formatGuess={formatGuess} addNewGuess={addNewGuess} />
             </VStack>
             <VStack w={{base: '100%', md: '100%', lg: '30%'}}
             >

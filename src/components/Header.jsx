@@ -42,7 +42,7 @@ const Header = () => {
               <PopoverHeader fontSize="26px">How to Play?</PopoverHeader>
               <PopoverBody fontSize="18px" textAlign="center">
                 Guess the Word in 6 tries.<br></br>
-                Each guess must be a 7-letter word. Hit the enter button to
+                Each guess must be a 7-letter word without a space. Hit the enter button to
                 submit after completing the word.<br></br>
                 After each guess, the color of the tiles will change to show how
                 close your guess was to the word.
