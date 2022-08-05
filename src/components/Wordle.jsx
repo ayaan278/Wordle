@@ -50,7 +50,7 @@ export default function Worlde({ solution, hint }) {
               {hints && <Hint hint={hint} />}
             </VStack>
             <VStack w={{base: '100%', md: '100%', lg: '40%'}} pt="2em">
-              <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
+              <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} handleKeyup={handleKeyup} />
             </VStack>
             <VStack w={{base: '100%', md: '100%', lg: '30%'}}
             >

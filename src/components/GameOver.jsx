@@ -28,6 +28,7 @@ export default function GameOver ({ isCorrect, turn, solution }) {
             loop
             mode="normal"
             src={Confetti}
+            style={{ height: '250px', width: '300px' }}
             >
           </Player>
           <Divider orientation='horizontal' />
@@ -51,7 +52,7 @@ export default function GameOver ({ isCorrect, turn, solution }) {
             loop
             mode="normal"
             src={Melt}
-            style={{ height: '300px', width: '300px' }}
+            style={{ height: '250px', width: '300px' }}
             >
           </Player>
           <Divider orientation='horizontal' />

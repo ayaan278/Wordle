@@ -65,6 +65,7 @@ export default function Row({ guess, currentGuess }) {
         defaultValue="       "
         variant={"filled"}
         type="alphanumeric"
+        isDisabled={true}
       >
         <PinInputField />
         <PinInputField />
