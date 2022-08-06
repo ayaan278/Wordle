@@ -50,23 +50,23 @@ const useWordle = (solution) => {
         return prevTurn + 1
     })
     setUsedKeys((prevUsedKeys) =>{
-      let newKeys = {...prevUsedKeys}
+
       formattedGuess.forEach((l) =>{
-        const currentColor = newKeys[l.key]
+        const currentColor = prevUsedKeys[l.key]
         if(l.color=== '#5FD068'){
-          newKeys[l.key] = '#5FD068'
+          prevUsedKeys[l.key] = '#5FD068'
           return
         }
         if(l.color=== '#FFEE63' && currentColor !== '#5FD068'){
-          newKeys[l.key] = '#FFEE63'
+          prevUsedKeys[l.key] = '#FFEE63'
           return
         }
         if(l.color=== 'grey' && currentColor !== '#5FD068' && currentColor !== '#FFEE63'){
-          newKeys[l.key] = 'grey'
+          prevUsedKeys[l.key] = 'grey'
           return
         }
       })
-      return newKeys
+      return prevUsedKeys
     })
     setCurrentGuess('')
   }
