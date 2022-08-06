@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import {
   Center,
   Container,
@@ -18,7 +18,7 @@ export default function Worlde({ solution, hint }) {
   const [showModal, setShowModal] = useState(false);
   const [hints, showHints] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.addEventListener("keyup", handleKeyup);
 
     if (isCorrect) {

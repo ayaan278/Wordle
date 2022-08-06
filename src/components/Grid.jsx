@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import {
   Center,
   Container,
-  Heading,
   VStack,
   Input,
   InputGroup,
   Button,
   InputRightElement,
-  Show, Hide
+  Show,
 } from "@chakra-ui/react";
 import Row from "./Row";
 
