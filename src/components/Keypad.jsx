@@ -10,8 +10,7 @@ export default function Keypad({usedKeys}) {
   const [letters, setLetters] = useState(null);
 
   useEffect(() => {
-    // fetch("http://localhost:3001/letters")
-    fetch("https://api.npoint.io/1238a98c3a3ca57bc550/letters")
+    fetch("http://localhost:3001/letters")
       .then((res) => res.json())
       .then((json) => {
         setLetters(json);

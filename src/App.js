@@ -1,6 +1,5 @@
 import { useLayoutEffect, useState } from "react";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Wordle from "./components/Wordle";
 
 
@@ -9,8 +8,7 @@ function App() {
   const [hint, setHint] = useState(null);
 
   useLayoutEffect(() => {
-    // fetch("http://localhost:3001/solutions")
-    fetch("https://api.npoint.io/1238a98c3a3ca57bc550/solutions")
+    fetch("http://localhost:3001/solutions")
       .then((res) => res.json())
       .then((json) => {
         // console.log(json);
@@ -27,7 +25,6 @@ function App() {
       <Header />
       {solution && <Wordle solution={solution} hint={hint} />}
       {/* doesn't print solution unless there is some values to it */}
-      <Footer />
     </>
   );
 }
